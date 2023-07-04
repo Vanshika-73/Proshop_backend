@@ -26,5 +26,5 @@ server.use(notFound);
 
 
 
-
-server.listen(5000,()=> console.log("server is running on port 5000".yellow.bold.underline));
+const port =process.env.PORT;
+server.listen(port,()=>console.log(`server is running on port ${port}`.yellow.bold.underline));
