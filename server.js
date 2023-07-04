@@ -1,4 +1,5 @@
 import express from "express";
+import colors from "colors";
 import connectDB from "./config/db.js";
 import products from "./routes/ProductRoute.js";
 import cors from "cors"
