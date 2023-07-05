@@ -10,21 +10,21 @@ import carts from "./routes/CartRoute.js";
 import orders from './routes/OrderRoute.js'
 
 
-const server= express();
+const app= express();
 
-server.use(express.json());
-server.use(cors());
+app.use(cors());
+app.use(express.json());
 
 connectDB();
-server.use("/api/products",products);
-server.use("/api/user",users);
-server.use("/api/cart",carts)
-server.use("/api/order",orders)
-server.use(errorHandler);
-server.use(notFound);
+app.use("/api/products",products);
+app.use("/api/user",users);
+app.use("/api/cart",carts)
+app.use("/api/order",orders)
+app.use(errorHandler);
+app.use(notFound);
 
 
 
 
 const port =process.env.PORT;
-server.listen(port,()=>console.log(`server is running on port ${port}`.yellow.bold.underline));
+app.listen(port,()=>console.log(`server is running on port ${port}`.yellow.bold.underline));
