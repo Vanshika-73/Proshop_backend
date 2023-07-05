@@ -4,10 +4,10 @@ import { adminAuth } from "../middleware/authMiddleware.js";
 
 const routes= Router();
 
-routes.route("/").get(getProducts);
+routes.get("/",getProducts);
 routes.post("/", adminAuth, createProduct);
 routes.post("/reviews/:_id", createReview);
-routes.route("/:_id").get(getProduct);
+routes.get("/:_id",getProduct);
 routes.put("/:_id", adminAuth, updateProduct);
 routes.delete("/:_id", adminAuth, deleteProduct);
 export default routes;
