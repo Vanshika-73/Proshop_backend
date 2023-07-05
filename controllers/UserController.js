@@ -1,7 +1,7 @@
 import User from "../models/UserModel.js";
 import asyncHandler from "express-async-handler";
 import bcrypt from "bcrypt";
-import generateToken from "../utils/generateToken.js";
+import generateToken from "../Utils/generateToken.js";
 
 // @desc -  fetch all users
 // @route - GET /api/user
